@@ -1,4 +1,4 @@
 # sudoku_solver
-Sudoku solver
+Sudoku Solver
 
 I coded my own sudoku solver.
