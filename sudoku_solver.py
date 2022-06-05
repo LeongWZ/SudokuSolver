@@ -145,7 +145,7 @@ def sudokuSolver(board):
     emptyList = makeEmptyList(board)
     history = makeHistory(emptyList)
 
-    solution = board
+    solution = board.copy()
     
     x = 0
     while x < len(emptyList):
