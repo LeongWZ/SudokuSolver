@@ -200,9 +200,9 @@ def processTestCases(testCases):
             result = sudokuSolver(test)
             for row in result:
                 print(row)
-        except:
+        except Exception as e:
             result = 'No solution'
-            print(result)
+            print(f'{result}; {e}')
 
         # checks if result matches with given solution
         try:
@@ -234,9 +234,9 @@ def processInput(input):
         result = sudokuSolver(inputArray)
         for row in result:
             print(row)
-    except:
+    except Exception as e:
         result = 'No solution'
-        print(result)
+        print(f'{result}; {e}')
     
     # prints separation
     print('-'*50)
