@@ -29,7 +29,7 @@ class Solution(object):
         coordinatesGroupTable = {}
         for group in groupings:
             for index, coordinates in enumerate(group):
-                l = list(group)
+                l = group.copy()
                 l.pop(index)
                 coordinatesGroupTable[coordinates] = l
 
