@@ -26,7 +26,7 @@ class Solution(object):
                 elif 6 <= i <= 8 and 6 <= j <= 8:
                     groupings[8].append((i, j))
 
-        coordinatesGroupTable = dict()
+        coordinatesGroupTable = {}
         for group in groupings:
             for index, coordinates in enumerate(group):
                 l = list(group)
