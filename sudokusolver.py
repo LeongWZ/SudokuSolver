@@ -216,27 +216,29 @@ class Solution(object):
             for k in counters.keys():
                 if counters[k][0] == smallestEmptyCounter:
                     emptyTie[k] = counters[k]
+
             if len(emptyTie) == 1:
                 for k in emptyTie.keys():
                     return k
-            else:
-                largestIndexCounter = max(emptyTie.values(), key=lambda x: x[1])[1]
-                indexTie = {}
-                for k in emptyTie.keys():
-                    if emptyTie[k][1] == largestIndexCounter:
-                        indexTie[k] = emptyTie[k]
-                for k in indexTie.keys():
-                    return k
 
-        smallestEmptyCounter = min(counters.values())
-        emptyTie = {}
-        for k in counters.keys():
-            if counters[k] == smallestEmptyCounter:
-                emptyTie[k] = counters[k]
-        if len(emptyTie) == 1:
+            largestIndexCounter = max(emptyTie.values(), key=lambda x: x[1])[1]
+            indexTie = {}
             for k in emptyTie.keys():
+                if emptyTie[k][1] == largestIndexCounter:
+                    indexTie[k] = emptyTie[k]
+            for k in indexTie.keys():
                 return k
         else:
+            smallestEmptyCounter = min(counters.values())
+            emptyTie = {}
+            for k in counters.keys():
+                if counters[k] == smallestEmptyCounter:
+                    emptyTie[k] = counters[k]
+
+            if len(emptyTie) == 1:
+                for k in emptyTie.keys():
+                    return k
+                    
             count_startTopLeft_goRight = False
             count_startBottomRight_goLeft = False
             count_startTopLeft_goDown = False
