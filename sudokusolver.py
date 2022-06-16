@@ -325,7 +325,7 @@ class Solution(object):
                 history[(i,j)] = None
                 x += 1
                 if x >= len(emptyList):
-                    raise Exception('x cannot be above or equal to length of emptyList')
+                    raise Exception('x cannot be above or equal to %d' % len(emptyList))
 
     def startTopLeft_goRight_traverse(self, board):
         """
